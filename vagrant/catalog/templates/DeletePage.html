@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+      <main class="main-section row">
+        {% include "categoryMenu.html" %}
+        <article class="col-9">
+					<div class = 'pane'>
+            <h2> Are you sure you want to delete {{game_to_delete.name}} from {{game_genre.name}}? </h2>
+
+            <form action="#" method = 'post'>
+
+              <button href = "{{url_for('deleteGame', game_genre_id=game_genre.id, game_id=game_to_delete.id)}}" class="button confirmButton" id="submit" type="submit">Confirm</button>
+              <a href = "{{url_for('showHomePage')}}" class="button cancelButton">Cancel</a>
+
+            </form>
+
+
+					</div>
+        </article>
+      </main>
+{% endblock %}

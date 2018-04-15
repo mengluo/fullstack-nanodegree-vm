@@ -1,0 +1,14 @@
+<article class="col-3">
+  <div class = 'side-bar'>
+  <h2>Categories</h2>
+
+
+  {% for genre in game_genres %}
+
+  <a href = "{{url_for('showGames', game_genre_id = genre.id)}}" class="button">{{genre.name}}</a></br></br>
+
+  {% endfor %}
+
+
+  </div>
+</article>

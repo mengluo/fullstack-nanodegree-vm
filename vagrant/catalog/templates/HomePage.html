@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+      <main class="main-section row">
+        {% include "categoryMenu.html" %}
+        <article class="col-9">
+					<div class = 'pane'>
+
+          <a href = "{{url_for('newGame')}}" class="button">Add a New Game</a>
+
+					<h2>Recently added games</h2>
+
+
+            {% for game in games %}
+
+  					<a href = "{{url_for('showGame', game_genre_id = game.game_genre_id, game_id = game.id)}}" class="button">{{game.name}}</a></br></br>
+
+  					{% endfor %}
+
+
+					</div>
+        </article>
+      </main>
+{% endblock %}

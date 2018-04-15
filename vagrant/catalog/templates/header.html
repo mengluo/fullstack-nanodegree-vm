@@ -1,0 +1,15 @@
+<header class="row">
+  <div class="header-title col">
+    <h1 class="header-text">
+      <a href = "{{url_for('showHomePage')}}" class="header-link" >Catalog App</a>
+    </h1>
+  </div>
+  <div class="login-button col">
+      {% if loggedIn %}
+      <a href = "{{url_for('gdisconnect')}}" class="button">Logout</a>
+      {% endif %}
+      {% if not loggedIn %}
+      <a href = "{{url_for('showLogin')}}" class="button">Login</a>
+      {% endif %}
+  </div>
+</header>

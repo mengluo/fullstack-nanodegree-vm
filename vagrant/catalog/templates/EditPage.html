@@ -1,0 +1,38 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+      <main class="main-section row">
+        {% include "categoryMenu.html" %}
+        <article class="col-9">
+					<div class = 'pane'>
+            <h2> </h2>
+
+            <form action="#" method = 'post'>
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type ="text" maxlength="100" class="form-control" name="name" value="{{game_to_edit.name }}">
+
+                <label for="description">Description:</label>
+                <textarea class="form-control" maxlength="300" rows="3" name="description">{{game_to_edit.description}}</textarea>
+
+                <p>Game Genre</p>
+                  <select name="game_genre">
+
+                    {% for game_genre in game_genres %}
+                    <option value={{game_genre.id}} {% if selected_game_genre.id==game_genre.id %} selected="selected"{% endif %}>{{game_genre.name}}</option>
+                    {% endfor %}
+
+                  </select>
+                </br>
+                </br>
+                <button href = "{{url_for('editGame', game_genre_id=selected_game_genre.id, game_id=game_to_edit.id)}}" class="button confirmButton" id="submit" type="submit">Confirm</button>
+                <a href = "{{url_for('showHomePage')}}" class="button cancelButton">Cancel</a>
+              </div>
+
+            </form>
+
+
+					</div>
+        </article>
+      </main>
+{% endblock %}

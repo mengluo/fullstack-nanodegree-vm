@@ -1,0 +1,39 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+      <main class="main-section row">
+        {% include "categoryMenu.html" %}
+        <article class="col-9">
+					<div class = 'pane'>
+						<h2>New Game</h2>
+
+						<form action="#" method = 'post'>
+
+
+							<p>Name:</p>
+								<input type ='text' size='30' name='name'>
+							<p>Description:</p>
+								<input type ='text' size='30' name='description'>
+							<p>Game Genre</p>
+								<select name="game_genre">
+
+									{% for game_genre in game_genres %}
+									<option value={{game_genre.id}}>{{game_genre.name}}</option>
+									{% endfor %}
+
+								</select>
+							</br>
+							</br>
+							</br>
+
+
+						<input type='submit' value='Create'>
+
+						</form>
+
+
+					</div>
+        </article>
+      </main>
+{% endblock %}

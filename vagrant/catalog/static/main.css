@@ -1,0 +1,88 @@
+body {
+    padding: 2% 10% 0 10%;
+    color: #2d3c49!important;
+    background-color: #e6e6e6 !important;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif !important;
+}
+
+header {
+  margin: 0 0 2% 0;
+  background-color: black;
+  padding-top: 2% !important;
+}
+
+.header-title {
+  text-align: left;
+}
+
+a.header-text {
+  color: white !important;
+}
+
+.header-link {
+  text-decoration: none !important;
+}
+
+.login-button {
+  text-align: right;
+}
+
+.button{
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  word-wrap: break-word;
+  vertical-align: middle;
+  width: 100px;
+  color: #007bff;
+  text-decoration: none !important;
+  background-color: transparent;
+  border: 1px solid #007bff;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  border-radius: .25rem;
+  transition: all .15s ease-in-out;
+}
+
+.button:hover{
+  color: white;
+  text-decoration: none !important;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.editButton, .confirmButton {
+  float: left;
+}
+
+.deleteButton, .cancelButton {
+  float: right;
+}
+
+h2 {
+  padding: 40px 0 40px 0;
+}
+
+.main-section {
+  text-align: center;
+  padding: 0 0 30% 0;
+}
+
+footer {
+  background-color: black;
+  margin: 50px 0 0 0;
+}
+
+.footer-text {
+  color: white !important;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 760px){
+  body {
+      padding: 2% 0 0 0;
+  }
+}
